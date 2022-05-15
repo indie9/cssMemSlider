@@ -1,0 +1,1 @@
+css mem slider rs school task
