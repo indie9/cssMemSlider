@@ -149,3 +149,70 @@ label::before{
 .custom-checkbox+label:active::before {
     background-color: #E6E1FF;
 } 
+
+@media (max-width: 480px) {
+    .wrapper{
+        width: 300px;
+        height: 275px;
+        margin-top: 30px;
+        background-color: aqua;
+        grid-template-columns:  1fr  1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .mem-wrap{
+        grid-column: 1/5;
+        grid-row: 1/2;
+        width: 300px;
+        height: 200px;
+        border-radius: 5px;
+    }
+    .sub-wrap{
+        width: 200px;
+        height: 50px;
+        overflow: hidden;
+        grid-column: 1/5;
+        grid-row: 3/4;
+    }
+    /************/
+   
+    .mem{
+        width: 1200px;
+        height: 200px;
+    }
+    .mem1{width: 300px;}
+    .mem2{width: 300px;}
+    .mem3{width: 300px;}
+    .mem4{width: 300px;}
+    
+    
+    .sub{
+        color: black;
+        width: 800px;
+        height: 50px;       
+    }
+    .sub-item{
+        width: 200px;
+        font-size: 20px;
+        color: purple;
+    }
+    
+    
+    #one:checked ~ .mem-wrap .mem { 
+        margin-left: 0px;
+    }
+    #two:checked ~ .mem-wrap .mem { 
+        margin-left: -300px;
+    }
+    #three:checked ~ .mem-wrap .mem { 
+        margin-left: -600px;
+    }
+    #four:checked ~ .mem-wrap .mem { 
+        margin-left: -900px;
+    }
+    
+    #one:checked ~ .sub-wrap .sub { margin-left: 0px;}
+    #two:checked ~ .sub-wrap .sub { margin-left: -200px;}
+    #three:checked ~ .sub-wrap .sub { margin-left: -400px;}
+    #four:checked ~ .sub-wrap .sub { margin-left: -600px;}
+    
+}   
